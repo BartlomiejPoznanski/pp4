@@ -1,5 +1,6 @@
 package pl.bpoznanski.ecommerce.catalog;
 
+
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -18,7 +19,8 @@ public class Product {
     public String getId() {
         return id;
     }
-    public BigDecimal getPrice(){
+
+    public BigDecimal getPrice() {
         return price;
     }
 

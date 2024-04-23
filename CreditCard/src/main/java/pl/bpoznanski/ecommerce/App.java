@@ -13,9 +13,12 @@ public class App {
     }
     @Bean
     ProductCatalog createMyCatalog(){
-        var catalog = new ProductCatalog();
+        var catalog = new ProductCatalog(new ArrayListProductStorage());
         catalog.addProduct("Lego set 8083", "Nice one");
         catalog.addProduct("Cobi set", "Nice one");
         return catalog;
     }
+
+
+
 }
