@@ -1,16 +1,15 @@
 package pl.bpoznanski.ecommerce.catalog;
-
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.UUID;
 
-import static  org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.*;
 public class HashMapProductStorageTest {
-    private static final String EXAMPLE_PRODUCT_NAME ="";
+    private static final String EXAMPLE_PRODUCT_NAME = "100 sm";
 
     @Test
-    void itStorageAndLoadProduct() {
+    void itStoresAndLoadProduct(){
         ProductStorage storage = thereIsProductStorage();
         Product product = thereIsExampleProduct();
 
@@ -22,27 +21,14 @@ public class HashMapProductStorageTest {
                 .extracting(p -> p.getName())
                 .contains(EXAMPLE_PRODUCT_NAME);
 
+
+
     }
-    private Product thereIsExampleProduct() {
-        var p = new Product(UUID.randomUUID(),EXAMPLE_PRODUCT_NAME,"some des");
+    private Product thereIsExampleProduct(){
+        var p = new Product(UUID.randomUUID(), EXAMPLE_PRODUCT_NAME,"some des");
         return p;
     }
-    private ProductStorage thereIsProductStorage() {
-        return new HashMapProductStorage() {
-            @Override
-            public List<Product> allProducts() {
-                return null;
-            }
-
-            @Override
-            public Product getProductBy(String id) {
-                return null;
-            }
-
-            @Override
-            public void add(Product newProduct) {
-
-            }
-        };
+    private ProductStorage thereIsProductStorage(){
+        return new HashMapProductStorage();
     }
 }

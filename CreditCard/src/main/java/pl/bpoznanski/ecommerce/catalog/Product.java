@@ -1,6 +1,5 @@
 package pl.bpoznanski.ecommerce.catalog;
 
-
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -16,24 +15,25 @@ public class Product {
         this.description = description;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public BigDecimal getPrice() {
+
+    public Object getPrice() {
         return price;
     }
 
-    public void changePrice(BigDecimal newPrice) {
-
-        this.price = newPrice;
+    public String getID() {
+        return id;
     }
 
-    public String getName() {
-        return name;
+    public void changePrice(BigDecimal newPrice){
+        this.price = newPrice;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getName() {
+        return name;
     }
 }
