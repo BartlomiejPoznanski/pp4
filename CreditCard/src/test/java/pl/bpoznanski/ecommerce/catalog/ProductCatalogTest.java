@@ -30,7 +30,7 @@ public class ProductCatalogTest {
     void itAllowsToAddProducts(){
         ProductCatalog catalog = getProductCatalog();
 
-        catalog.addProduct("Kod na 1000 smoczych monet","nice one");
+        catalog.addProduct("aaaaaaa","nice one");
         List<Product>  productList = catalog.allProducts();
         assertThat(productList).hasSize(1);
     }
@@ -38,7 +38,7 @@ public class ProductCatalogTest {
     @Test
     void itLoadsProductDetails(){
         ProductCatalog catalog = getProductCatalog();
-        String id = catalog.addProduct("Kod na 1000 smoczych monet","Nice one");
+        String id = catalog.addProduct("aaaaaa","Nice one");
 
         Product loadedProduct = catalog.getProductBy(id);
         assertThat(id).isEqualTo(loadedProduct.getID());
@@ -47,7 +47,7 @@ public class ProductCatalogTest {
     @Test
     void itAllowsToChangePrice(){
         ProductCatalog catalog = thereIsProductCatalog();
-        String id = catalog.addProduct("Kod na 1000 smoczych monet","Nice one");
+        String id = catalog.addProduct("aaaaaa","Nice one");
 
         catalog.changePrice(id, BigDecimal.valueOf(10.10));
         Product loaded = catalog.getProductBy(id);

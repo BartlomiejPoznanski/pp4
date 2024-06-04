@@ -1,3 +1,4 @@
+---
 server:
   port: 9999
 
@@ -6,6 +7,7 @@ spring:
     url: jdbc:h2:mem:testdb
     username: sa
     password: ~
+
   h2:
     console:
       enabled: true

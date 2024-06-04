@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.*;
 public class HashMapProductStorageTest {
-    private static final String EXAMPLE_PRODUCT_NAME = "100 sm";
+    private static final String EXAMPLE_PRODUCT_NAME = "100 ";
 
     @Test
     void itStoresAndLoadProduct(){
