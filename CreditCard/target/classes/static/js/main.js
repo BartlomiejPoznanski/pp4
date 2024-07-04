@@ -8,7 +8,8 @@ const refreshOffer = (offer) => {
     const offerItemsCountEl = document.querySelector("#offerItemsCount");
 
     offerTotalEl.textContent = offer.total;
-    offerItemsCount.textContent = offer.itemsCount;
+    offerItemsCountEl.textContent = offer.itemsCount;
+
 }
 
 const getProducts=()=> {
