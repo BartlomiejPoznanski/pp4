@@ -27,16 +27,8 @@ public class CustomerDetails {
     public String getLastname() {
         return lastname;
     }
-
-    public String getFirstName() {
-        return null;
-    }
-
-    public String getLastName() {
-        return null;
-    }
-
     public String getEmail() {
-        return null;
+        return email;
     }
 }
+
